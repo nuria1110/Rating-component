@@ -18,7 +18,7 @@ Users should be able to:
 ### Links
 
 - [Solution](#)
-- [Live Site](#)
+- [Live Site](interactive-rating-component-nuriatr.netlify.app)
 
 ### Built with
 

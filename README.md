@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution](#)
+- [Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-using-react-6vbssTwGql)
 - [Live Site](interactive-rating-component-nuriatr.netlify.app)
 
 ### Built with

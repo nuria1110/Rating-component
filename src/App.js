@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { RatingContext } from './Contexts/RatingContext';
+import RatingCard from './Components/RatingCard'
+import ThankyouCard from './Components/ThankyouCard'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	const [hasRating, setHasRating] = useState(false);
+	const [ratingValue, setRatingValue] = useState('');
+	const ratingData = { hasRating, setHasRating, ratingValue, setRatingValue };
+	
+	return (
+		<div className="App">
+			<RatingContext.Provider value={ratingData}>
+				{!hasRating ? <RatingCard /> : <ThankyouCard />}				
+			</RatingContext.Provider>
+		</div>
+	);
+};
 
 export default App;
+
+
+

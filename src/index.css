@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange-color: hsl(25, 97%, 53%);
+    --white-color: hsl(0, 0%, 100%);
+    --light-grey-color: hsl(217, 12%, 63%);
+    --medium-grey-color: hsl(216, 12%, 54%);
+    --dark-blue-color: hsl(213, 19%, 18%);
+    --very-dark-blue-color: hsl(216, 12%, 8%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background:  var(--very-dark-blue-color);
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+p {
+    color: var(--medium-grey-color);
+    line-height: 1.6;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* Card */
+.card {
+    background: radial-gradient(at top center,#232a34,#171e28);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 385px;
+    margin-top: 250px;
+    border-radius: 20px;
+    padding: 30px;
+    opacity: 1;
+}
+
+.card.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card-main img {
+    background-color: var(--dark-blue-color);
+    padding: 14px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card-main h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.card-main p {
+    margin-bottom: 15px;
+}
+
+.card-thankyou {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-thankyou img {
+    margin: 15px 0;
+}
+
+.card-thankyou h4 {
+    color: var(--orange-color);
+    font-weight: 400;
+    background-color: var(--dark-blue-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.card-thankyou p {
+    text-align: center;
+}
+
+/* Card form */
+.rating-form {
+    width: 100%;
+}
+
+.rating-form .rating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-rating {
+    color: var(--medium-grey-color);
+    background-color: var(--dark-blue-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 25px;
+}
+
+.b-rating:hover {
+    color: var(--white-color);
+    background-color: var(--orange-color);
+}
+
+.b-rating[active=true] {
+    color: var(--white-color);
+    background-color: var(--medium-grey-color);
+}
+
+.rating-form .rating-submit {
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--orange-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.rating-form .rating-submit:hover {
+    color: var(--orange-color);
+    background-color: var(--white-color);
 }

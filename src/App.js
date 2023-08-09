@@ -13,6 +13,10 @@ function App() {
 			<RatingContext.Provider value={ratingData}>
 				{!hasRating ? <RatingCard /> : <ThankyouCard />}				
 			</RatingContext.Provider>
+			<div class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+				Coded by <a href="https://www.frontendmentor.io/profile/nuria1110">Nuria Torres</a>.
+			</div>
 		</div>
 	);
 };
